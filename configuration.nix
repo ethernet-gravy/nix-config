@@ -44,7 +44,7 @@
 	}
   ];
   programs.hyprland.enable = true;
-   services.xserver.displayManager.sddm.enable = true;
+   services.xserver.displayManager.sddm.enable = false;
    services.xserver.displayManager.startx.enable = false;
    services.xserver.windowManager.awesome = {
    	enable = true;
@@ -53,6 +53,20 @@
 		luadbi-mysql
 	];
    };
+
+ services.greetd = {
+    enable = true;
+    settings = {
+        initial_session = {
+            command = "${pkgs.hyprland}/bin/Hyprland";
+            user = "nakul";
+        };
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --sessions ${config.services.xserver.displayManager.sessionData.desktops}/share/xsessions:${config.services.xserver.displayManager.sessionData.desktops}/share/wayland-sessions --remember --remember-user-session";
+        user = "greeter";
+      };
+    };
+  };
    services.xserver.windowManager.dwm.enable = true;
 #   services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
 #	src = /home/nakul/.config/dwm;
@@ -106,7 +120,6 @@
      gcc
      git
      fish
-     starship
      wezterm
      gnumake
      starship
@@ -143,7 +156,26 @@
    	EDITOR = "nvim";
    };
    environment.localBinInPath = true;
+   users.defaultUserShell = pkgs.zsh;
 
+   programs.starship.enable = true;
+   programs = {
+       zsh = {
+           enable = true;
+           autosuggestions.enable = true;
+           zsh-autoenv.enable = true;
+           syntaxHighlighting.enable = true;
+           ohMyZsh = {
+               enable = true;
+           #    theme = "robbyrussell";
+           #    plugins = [
+           #        "git"
+           #            "history"
+           #            "rust"
+           #    ];
+           };
+       };
+   };
 
   fonts.packages = with pkgs; [
 	(nerdfonts.override { fonts = ["CascadiaCode" "Iosevka" ]; })
