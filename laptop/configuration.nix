@@ -44,9 +44,21 @@
 	y = 1080;
 	}
   ];
+
   programs.hyprland.enable = true;
-   services.xserver.displayManager.sddm.enable = false;
+   services.xserver.displayManager.sddm = {
+       enable = true;
+       wayland.enable = true;
+#       settings = {
+#           Autologin = {
+#                Session = "Hyprland.desktop";
+#                User = "nakul";
+#           };
+#       };
+   };
    services.xserver.displayManager.startx.enable = true;
+   services.xserver.displayManager.autoLogin.enable = true;
+   services.xserver.displayManager.autoLogin.user = "nakul";
    services.xserver.windowManager.awesome = {
    	enable = true;
 	luaModules = with pkgs.luaPackages; [
@@ -55,19 +67,19 @@
 	];
    };
 
- services.greetd = {
-    enable = true;
-    settings = {
-        initial_session = {
-            command = "${pkgs.hyprland}/bin/Hyprland";
-            user = "nakul";
-        };
-      default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --sessions ${config.services.xserver.displayManager.sessionData.desktops}/share/xsessions:${config.services.xserver.displayManager.sessionData.desktops}/share/wayland-sessions --remember --remember-user-session";
-        user = "greeter";
-      };
-    };
-  };
+# services.greetd = {
+#    enable = true;
+#    settings = {
+#        initial_session = {
+#            command = "${pkgs.hyprland}/bin/Hyprland";
+#            user = "nakul";
+#        };
+#      default_session = {
+#        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --sessions ${config.services.xserver.displayManager.sessionData.desktops}/share/xsessions:${config.services.xserver.displayManager.sessionData.desktops}/share/wayland-sessions --remember --remember-user-session";
+#        user = "greeter";
+#      };
+#    };
+#  };
 
 systemd.services.greetd = {
 # The following option is aimed at removing the error flood to the tui dm
@@ -82,9 +94,9 @@ systemd.services.greetd = {
     };
 };
    services.xserver.windowManager.dwm.enable = true;
-#   services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
-#	src = /home/nakul/.config/dwm;
-#   };
+   services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
+	src = /home/nakul/.dots/dwm/.config/dwm;
+   };
 
 
   
