@@ -4,6 +4,7 @@
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
+    unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-23.11";
@@ -13,6 +14,7 @@
   outputs = {
     self,
     nixpkgs,
+    unstable,
     home-manager,
     ...
   } @ inputs: let
@@ -26,7 +28,7 @@
         specialArgs = {inherit inputs outputs;};
         # > Our main nixos configuration file <
         # modules = [./nixos/configuration.nix];
-         modules = [./configuration.nix];
+         modules = [./laptop/configuration.nix];
       };
     };
 
