@@ -46,7 +46,7 @@
   ];
 
   programs.hyprland.enable = true;
-   services.xserver.displayManager.sddm = {
+   services.displayManager.sddm = {
        enable = true;
        wayland.enable = true;
 #       settings = {
@@ -57,9 +57,9 @@
 #       };
    };
    services.xserver.displayManager.startx.enable = true;
-   services.xserver.displayManager.autoLogin.enable = true;
-   services.xserver.displayManager.autoLogin.user = "nakul";
-   services.xserver.displayManager.defaultSession = "hyprland";
+   services.displayManager.autoLogin.enable = true;
+   services.displayManager.autoLogin.user = "nakul";
+   services.displayManager.defaultSession = "hyprland";
    services.xserver.windowManager.awesome = {
    	enable = true;
 	luaModules = with pkgs.luaPackages; [
@@ -67,6 +67,20 @@
 		luadbi-mysql
 	];
    };
+
+systemd.user.services.custom-enable-speakers = {
+    enable = true;
+  description = "...";
+  serviceConfig = {
+      Type = "simple";
+  };
+  script = ''
+      ${pkgs.alsa-utils}/bin/amixer sset "Line" unmute -c 2
+      ${pkgs.alsa-utils}/bin/amixer sset "Line" 100% -c 2
+      ${pkgs.alsa-utils}/bin/amixer sset "Auto-Mute Mode" Disabled -c 2
+      '';
+  wantedBy = [ "default.target" ]; # starts after login
+};
 
 # services.greetd = {
 #    enable = true;
@@ -82,6 +96,7 @@
 #    };
 #  };
 
+services.udisks2.enable = true;
 systemd.services.greetd = {
 # The following option is aimed at removing the error flood to the tui dm
     serviceConfig = {
@@ -94,10 +109,10 @@ systemd.services.greetd = {
         TTYVTDislocate = true;
     };
 };
-   services.xserver.windowManager.dwm.enable = true;
-   services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
-	src = /home/nakul/.dots/dwm/.config/dwm;
-   };
+#   services.xserver.windowManager.dwm.enable = true;
+#   services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
+#	src = /home/nakul/.dots/dwm/.config/dwm;
+#   };
 
 
   
@@ -185,6 +200,16 @@ systemd.services.greetd = {
      imv
      hyprlock
      hypridle
+     lutris
+     heroic
+     jansson
+     wine
+     winetricks
+     pavucontrol
+     alsa-utils
+     easyeffects
+     mangohud
+     mako
    ];
 
 #   nixpkgs.config.permittedInsecurePackages = [
@@ -199,6 +224,7 @@ systemd.services.greetd = {
    users.defaultUserShell = pkgs.zsh;
 
    programs.starship.enable = true;
+   programs.steam.enable = true;
    programs = {
        zsh = {
            enable = true;
