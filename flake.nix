@@ -30,7 +30,21 @@
         };
         # > Our main nixos configuration file <
         # modules = [./nixos/configuration.nix];
-         modules = [./laptop/configuration.nix];
+         modules = [
+            ./laptop/configuration.nix
+            ./modules/audio.nix
+            ./modules/bootloader.nix
+            ./modules/developement.nix
+            ./modules/display_manager.nix
+            ./modules/fonts.nix
+            ./modules/users.nix
+            ./modules/utils.nix
+            ./modules/hyprland.nix
+            ./modules/services.nix
+            ./modules/x11.nix
+            ./modules/zsh.nix
+            ./modules/network.nix
+         ];
       };
       pc = nixpkgs.lib.nixosSystem {
         specialArgs = {
@@ -38,7 +52,23 @@
         };
         # > Our main nixos configuration file <
         # modules = [./nixos/configuration.nix];
-         modules = [./pc/configuration.nix];
+         modules = [
+            ./pc/configuration.nix
+            ./modules/audio.nix
+            ./modules/rear-audio-jack-fix.nix
+            ./modules/bootloader.nix
+            ./modules/developement.nix
+            ./modules/display_manager.nix
+            ./modules/fonts.nix
+            ./modules/gaming.nix
+            ./modules/users.nix
+            ./modules/utils.nix
+            ./modules/hyprland.nix
+            ./modules/services.nix
+            ./modules/x11.nix
+            ./modules/zsh.nix
+            ./modules/network.nix
+         ];
       };
     };
 
