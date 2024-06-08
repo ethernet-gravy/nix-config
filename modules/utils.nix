@@ -22,9 +22,20 @@
         yazi
         dolphin
         imv
-        mako # notifications
+        #mako # notifications
+        dunst
         qbittorrent
         keepassxc
         armcord
+        (pkgs.discord.override {
+            # remove any overrides that you don't want
+            withOpenASAR = true;
+            withVencord = true;
+            })
+        rustdesk
+        wl-clipboard
+        jq
+        wgnord
+        nicotine-plus
     ];
 }
