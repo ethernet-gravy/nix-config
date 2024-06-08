@@ -2,6 +2,7 @@
 {
     
     security.rtkit.enable = true;
+    services.mpd.enable = true;
     services.pipewire = {
         enable = true;
         alsa.enable = true;

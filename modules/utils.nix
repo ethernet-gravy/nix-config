@@ -13,8 +13,8 @@
         rofi-wayland
         zip
         unzip
-        mpd
         ncmpcpp
+        strawberry
         grim
         slurp
         swappy
@@ -22,6 +22,7 @@
         yazi
         dolphin
         imv
+        mpv
         #mako # notifications
         dunst
         qbittorrent

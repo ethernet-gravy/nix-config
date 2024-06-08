@@ -13,7 +13,7 @@
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  virtualisation.virtualbox.guest.enable = true;
+#  virtualisation.virtualbox.guest.enable = true;
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
