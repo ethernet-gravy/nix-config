@@ -34,6 +34,7 @@
             withVencord = true;
             })
         rustdesk
+        zathura
         wl-clipboard
         jq
         wgnord
