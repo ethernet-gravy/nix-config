@@ -16,6 +16,7 @@
         ncmpcpp
         strawberry
         grim
+        grimblast
         slurp
         swappy
         cava
@@ -27,7 +28,6 @@
         dunst
         qbittorrent
         keepassxc
-        armcord
         (pkgs.discord.override {
             # remove any overrides that you don't want
             withOpenASAR = true;
@@ -39,5 +39,6 @@
         jq
         wgnord
         nicotine-plus
+        kicad
     ];
 }
