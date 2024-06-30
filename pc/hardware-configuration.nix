@@ -9,14 +9,19 @@
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "ahci" "usb_storage" "usbhid" "sd_mod" ];
-  boot.initrd.kernelModules = [ ];
+  boot.initrd.kernelModules = ["amdgpu"];
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
   boot.supportedFilesystems =[ "ntfs" ];
   hardware.enableRedistributableFirmware = true;                                                                                                                                                                   
-  hardware.opengl.enable = true;                                                                                                                                                                                   
-  hardware.opengl.driSupport = true; 
+  hardware.graphics ={
+    enable = true;
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+        amdvlk
+    ];
+  };
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/9cb85c8d-bdc8-422e-92ce-38ea402923f5";

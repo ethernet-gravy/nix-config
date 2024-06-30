@@ -1,6 +1,7 @@
 {pkgs, ...}:
 {
      
+     boot.plymouth.enable = true;
     environment.localBinInPath = true;
     environment.systemPackages = with pkgs; [
         wget
@@ -18,6 +19,7 @@
         grim
         grimblast
         slurp
+        ripgrep
         swappy
         cava
         yazi
@@ -30,7 +32,7 @@
         keepassxc
         (pkgs.discord.override {
             # remove any overrides that you don't want
-            withOpenASAR = true;
+            withOpenASAR = false;
             withVencord = true;
             })
         rustdesk
@@ -39,6 +41,6 @@
         jq
         wgnord
         nicotine-plus
-        kicad
+        btop
     ];
 }

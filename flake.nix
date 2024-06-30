@@ -7,15 +7,19 @@
 #    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     rust-overlay.url = "github:oxalica/rust-overlay";
+    stylix.url = "github:danth/stylix";
     # Home manager
-    home-manager.url = "github:nix-community/home-manager/release-23.11";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+        url = "github:nix-community/home-manager/release-24.05";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
+    stylix,
     rust-overlay,
     ...
   } @ inputs: let
@@ -71,6 +75,15 @@
             ./modules/zsh.nix
             ./modules/network.nix
             ./modules/rust.nix
+            ./modules/amd.nix
+#            stylix.nixosModules.stylix
+#            ./modules/stylix.nix
+#            home-manager.nixosModules.home-manager {
+#                home-manager.useGlobalPkgs = true;
+#                home-manager.useUserPackages = true;
+#                home-manager.users.nakul = import ./pc/home.nix;
+#                home-manager.extraSpecialArgs = {inherit inputs;};
+#            }
          ];
       };
     };

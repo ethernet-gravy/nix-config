@@ -24,4 +24,5 @@
            };
        };
    };
+   programs.fzf.keybindings = true;
 }
