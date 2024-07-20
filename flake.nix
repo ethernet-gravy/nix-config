@@ -76,6 +76,7 @@
             ./modules/network.nix
             ./modules/rust.nix
             ./modules/amd.nix
+            ./modules/kvm.nix
 #            stylix.nixosModules.stylix
 #            ./modules/stylix.nix
 #            home-manager.nixosModules.home-manager {

@@ -7,7 +7,6 @@
         gcc
         neovide
         nodejs
-        rustup
         obsidian
     ];
     environment.sessionVariables = {
