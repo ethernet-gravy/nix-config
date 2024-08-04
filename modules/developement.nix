@@ -8,6 +8,7 @@
         neovide
         nodejs
         obsidian
+        emacs
     ];
     environment.sessionVariables = {
         EDITOR = "nvim";

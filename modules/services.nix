@@ -11,7 +11,6 @@
 
 
   services.onedrive = {
-      package = pkgs.onedrive;
       enable = true;
   };
 

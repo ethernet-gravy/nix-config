@@ -1,31 +1,39 @@
-{ pkgs, config, ... }:
+{ pkgs, config, lib, ... }:
 let
-  # Change this to your username.
-  user = "nakul";
   # Change this to match your system's CPU.
   platform = "amd";
   # Change this to specify the IOMMU ids you wrote down earlier.
   vfioIds = [ "1002:744c" "1002:ab30"];
+  coreutils = pkgs.writeShellApplication {
+     name = "coreutils";
+     runtimeInputs = [
+        pkgs.coreutils
+     ];
+     text = ''
+        realpath /dev/dri/by-path/pci-0000:00:02.0-card 
+     '';
+  };
 in {
-  # Configure kernel options to make sure IOMMU & KVM support is on.
+
+
+  options.vfio.enable = with lib;
+    mkEnableOption "Configure the machine for VFIO";
+  config = 
+  let cfg = config.vfio;
+  in {
+# Configure kernel options to make sure IOMMU & KVM support is on.
   boot = {
-    kernelModules = [ "kvm-${platform}" "vfio_virqfd" "vfio_pci" "vfio_iommu_type1" "vfio" ];
-    kernelParams = [  "kvm.ignore_msrs=1" ];
-    extraModprobeConfig = "options vfio-pci ids=${builtins.concatStringsSep "," vfioIds}";
+    initrd.kernelModules = [ "vfio_pci" ];
+    kernelParams = [  "kvm.ignore_msrs=1" "iommu=pt" "vfio_iommu_type1.allow_unsafe_interrupts=1"];
   };
 
-
-  # Add virt-manager and looking-glass to use later.
-  environment.systemPackages = with pkgs; [
-      virt-manager
-  ];
 
   # Enable virtualisation programs. These will be used by virt-manager to run your VM.
   virtualisation = {
      libvirtd = {
        enable = true;
        extraConfig = ''
-         user="${user}"
+         user="nakul"
        '';
 
        # Don't start any VMs automatically on boot.
@@ -34,15 +42,27 @@ in {
        onShutdown = "shutdown";
 
        qemu = {
-         package = pkgs.qemu_kvm;
-         ovmf = enabled;
+         ovmf.enable = true;
          verbatimConfig = ''
             namespaces = []
-           user = "+${builtins.toString config.users.users.${user}.uid}"
+           user = "nakul"
+           group = "users"
          '';
        };
     };
   };
 
-  users.users.${user}.extraGroups = [ "qemu-libvirtd" "libvirtd" "disk" ];
+  environment = {
+    systemPackages = [ pkgs.dmidecode ];
+    shellAliases = {
+      vm-start = "virsh start win10";
+      vm-stop = "virsh shutdown win10";
+    };
+  };
+
+  programs.virt-manager.enable = true;
+
+  users.users.nakul.extraGroups = [ "qemu-libvirtd" "libvirtd" "disk" ];
+  };
+  
 }
