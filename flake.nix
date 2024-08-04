@@ -46,7 +46,6 @@
             ./modules/utils.nix
             ./modules/hyprland.nix
             ./modules/services.nix
-            ./modules/x11.nix
             ./modules/zsh.nix
             ./modules/network.nix
             ./modules/rust.nix

@@ -20,9 +20,9 @@
         ];
     };
 
-    services.xserver.windowManager.dwm.enable = true;
-    services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
-	src = /home/nakul/.dots/dwm/.config/dwm;
-   };
+#    services.xserver.windowManager.dwm.enable = true;
+#    services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
+#	src = /home/nakul/.dots/dwm/.config/dwm;
+#   };
 
 }
