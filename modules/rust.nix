@@ -9,6 +9,7 @@
         lldb_16
         taplo #toml formatter & lsp
         bacon
+        cargo-generate
     ];
 
 }

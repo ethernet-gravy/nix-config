@@ -7,8 +7,8 @@
         gcc
         neovide
         nodejs
-        rustup
         obsidian
+        emacs
     ];
     environment.sessionVariables = {
         EDITOR = "nvim";

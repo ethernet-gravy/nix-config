@@ -35,6 +35,7 @@
             withOpenASAR = false;
             withVencord = true;
             })
+        telegram-desktop
         rustdesk
         zathura
         wl-clipboard
@@ -42,5 +43,6 @@
         wgnord
         nicotine-plus
         btop
+        qmk
     ];
 }
