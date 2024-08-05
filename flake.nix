@@ -49,6 +49,7 @@
             ./modules/zsh.nix
             ./modules/network.nix
             ./modules/rust.nix
+            ./modules/bluetooth.nix
          ];
       };
       pc = nixpkgs.lib.nixosSystem {
