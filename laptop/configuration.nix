@@ -12,6 +12,7 @@
    time.timeZone = "America/Winnipeg";
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
+   nix.settings.auto-optimise-store = true;
 
 #  virtualisation.virtualbox.guest.enable = true;
   # List services that you want to enable:

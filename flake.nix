@@ -8,6 +8,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     rust-overlay.url = "github:oxalica/rust-overlay";
     stylix.url = "github:danth/stylix";
+    rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     # Home manager
     home-manager = {
         url = "github:nix-community/home-manager/release-24.05";
