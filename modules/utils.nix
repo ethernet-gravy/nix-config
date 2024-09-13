@@ -36,6 +36,7 @@
             withOpenASAR = false;
             withVencord = true;
             })
+        vesktop
         telegram-desktop
         rustdesk
         zathura
