@@ -44,6 +44,7 @@
         jq
         wgnord
         nicotine-plus
+        brightnessctl
         btop
         qmk
     ];
