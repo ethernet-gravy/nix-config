@@ -12,6 +12,7 @@
         hypridle
         hyprpicker
         hyprcursor
+        cliphist
         inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     ];
     environment.sessionVariables = {
