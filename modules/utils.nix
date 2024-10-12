@@ -47,5 +47,6 @@
         brightnessctl
         btop
         qmk
+        ipe
     ];
 }

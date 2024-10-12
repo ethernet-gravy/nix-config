@@ -9,6 +9,8 @@
         mangohud
         lm_sensors
         pcsx2
+        ns-usbloader
+        xorg.xhost
     ];
     programs.steam.enable = true;
     programs.gamemode.enable = true;
