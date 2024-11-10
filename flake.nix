@@ -6,6 +6,7 @@
 #    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
 #    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
     rust-overlay.url = "github:oxalica/rust-overlay";
     stylix.url = "github:danth/stylix";
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
@@ -19,12 +20,14 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-stable,
     home-manager,
     stylix,
     rust-overlay,
     ...
   } @ inputs: let
     inherit (self) outputs;
+    pkgs-stable = nixpkgs-stable;
   in {
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
@@ -56,6 +59,7 @@
       pc = nixpkgs.lib.nixosSystem {
         specialArgs = {
             inherit inputs outputs;
+            inherit pkgs-stable;
         };
         # > Our main nixos configuration file <
         # modules = [./nixos/configuration.nix];

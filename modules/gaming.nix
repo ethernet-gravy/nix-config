@@ -1,6 +1,6 @@
-{pkgs, ...}:
+{pkgs, pkgs-stable, ...}:
 {
-    environment.systemPackages = with pkgs; [
+    environment.systemPackages = (with pkgs; [
         wineWowPackages.stable
         winetricks
         lutris
@@ -11,7 +11,14 @@
         pcsx2
         ns-usbloader
         xorg.xhost
-    ];
+        prismlauncher
+        lunar-client
+        hmcl
+    ])
+    ++
+    (with pkgs-stable; [
+        #minecraft
+    ]);
     programs.steam.enable = true;
     programs.gamemode.enable = true;
 }
