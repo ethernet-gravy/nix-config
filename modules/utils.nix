@@ -22,7 +22,7 @@
         slurp
         ripgrep
         swappy
-        cava
+        # cava
         yazi
         dolphin
         imv
