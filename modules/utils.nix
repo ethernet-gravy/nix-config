@@ -48,5 +48,9 @@
         btop
         qmk
         ipe
+        freecad
+        kicad
+        texliveBasic
+        texlivePackages.wrapfig
     ];
 }
