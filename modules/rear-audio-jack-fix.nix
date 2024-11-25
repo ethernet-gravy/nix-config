@@ -2,6 +2,7 @@
 {
     systemd.user.services.custom-enable-speakers = {
         enable = true;
+        after = ["pipewire-pulse.service" "pipewire-media-session.service"];
         description = "...";
         serviceConfig = {
             Type = "simple";
