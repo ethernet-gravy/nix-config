@@ -50,6 +50,7 @@
         ipe
         freecad
         kicad
+        bambu-studio
         texliveBasic
         texlivePackages.wrapfig
     ];

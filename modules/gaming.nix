@@ -4,6 +4,7 @@
         wineWowPackages.stable
         winetricks
         lutris
+        protontricks
         heroic
         gamescope
         mangohud
@@ -11,9 +12,6 @@
         pcsx2
         ns-usbloader
         xorg.xhost
-        prismlauncher
-        lunar-client
-        hmcl
     ])
     ++
     (with pkgs-stable; [
