@@ -14,6 +14,11 @@
       enable = true;
   };
 
+
+  environment.systemPackages = (with pkgs; [
+        openssl
+  ]);
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
