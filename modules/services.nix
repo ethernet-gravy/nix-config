@@ -1,4 +1,4 @@
-{lib, pkgs, ...}:
+{lib, pkgs, pkgs-stable, ...}:
 {
     services.udisks2.enable = true;
      
@@ -12,6 +12,7 @@
 
   services.onedrive = {
       enable = true;
+      package = pkgs-stable.onedrive;
   };
 
 
