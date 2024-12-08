@@ -1,9 +1,9 @@
-{pkgs, ...}:
+{pkgs, pkgs-stable, ...}:
 {
      
      boot.plymouth.enable = true;
     environment.localBinInPath = true;
-    environment.systemPackages = with pkgs; [
+    environment.systemPackages = (with pkgs; [
         wget
         git
         libreoffice
@@ -38,7 +38,6 @@
             })
         vesktop
         telegram-desktop
-        rustdesk
         zathura
         wl-clipboard
         jq
@@ -53,5 +52,8 @@
         bambu-studio
         texliveBasic
         texlivePackages.wrapfig
-    ];
+    ])
+    ++ (with pkgs-stable; [
+        rustdesk
+    ]);
 }
