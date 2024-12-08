@@ -6,7 +6,7 @@
 #    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
 #    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
+    #nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
     rust-overlay.url = "github:oxalica/rust-overlay";
     stylix.url = "github:danth/stylix";
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
@@ -20,14 +20,13 @@
   outputs = {
     self,
     nixpkgs,
-    nixpkgs-stable,
     home-manager,
     stylix,
     rust-overlay,
     ...
   } @ inputs: let
     inherit (self) outputs;
-    pkgs-stable = nixpkgs-stable;
+    #system = "x86_64-linux";
   in {
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
@@ -36,7 +35,8 @@
       laptop = nixpkgs.lib.nixosSystem {
         specialArgs = {
             inherit inputs outputs;
-            inherit pkgs-stable;
+            #inherit pkgs-stable;
+
         };
         # > Our main nixos configuration file <
         # modules = [./nixos/configuration.nix];
@@ -60,7 +60,7 @@
       pc = nixpkgs.lib.nixosSystem {
         specialArgs = {
             inherit inputs outputs;
-            inherit pkgs-stable;
+            #inherit pkgs-stable;
         };
         # > Our main nixos configuration file <
         # modules = [./nixos/configuration.nix];
@@ -83,14 +83,6 @@
             ./modules/rust.nix
             ./modules/amd.nix
             ./modules/kvm.nix
-#            stylix.nixosModules.stylix
-#            ./modules/stylix.nix
-#            home-manager.nixosModules.home-manager {
-#                home-manager.useGlobalPkgs = true;
-#                home-manager.useUserPackages = true;
-#                home-manager.users.nakul = import ./pc/home.nix;
-#                home-manager.extraSpecialArgs = {inherit inputs;};
-#            }
          ];
       };
     };

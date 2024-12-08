@@ -1,4 +1,7 @@
-{pkgs, pkgs-stable, ...}:
+{pkgs, inputs, config, ...}:
+#let 
+#  stable = import inputs.nixpkgs-stable { config = config.nixpkgs.config // { allowUnfree = true; }; };
+#in 
 {
      
      boot.plymouth.enable = true;
@@ -52,8 +55,6 @@
         bambu-studio
         texliveBasic
         texlivePackages.wrapfig
-    ])
-    ++ (with pkgs-stable; [
         rustdesk
-    ]);
+    ]); 
 }

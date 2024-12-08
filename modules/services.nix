@@ -10,14 +10,7 @@
     services.printing.enable = true;
 
 
-  services.onedrive = {
-      enable = true;
-  };
-
-
-  environment.systemPackages = (with pkgs; [
-        openssl
-  ]);
+    services.onedrive.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;

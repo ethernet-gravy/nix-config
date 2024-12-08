@@ -1,4 +1,4 @@
-{pkgs, pkgs-stable, ...}:
+{pkgs, ...}:
 {
     environment.systemPackages = (with pkgs; [
         wineWowPackages.stable
@@ -12,10 +12,6 @@
         pcsx2
         ns-usbloader
         xorg.xhost
-    ])
-    ++
-    (with pkgs-stable; [
-        #minecraft
     ]);
     programs.steam.enable = true;
     programs.gamemode.enable = true;
