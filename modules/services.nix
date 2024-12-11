@@ -10,7 +10,21 @@
     services.printing.enable = true;
 
 
-    services.onedrive.enable = true;
+
+   environment.systemPackages = (with pkgs; [
+        onedrive
+   ]); 
+   systemd.user.services.custom-enable-onedrive = {
+        enable = true;
+        after = ["network.service"];
+        description = "...";
+        serviceConfig = {
+            Type = "simple";
+            ExecStart = ''${pkgs.onedrive}/bin/onedrive --monitor'';
+        };
+        wantedBy = [ "default.target" ]; # starts after login
+    };
+
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
