@@ -56,5 +56,6 @@
         texliveBasic
         texlivePackages.wrapfig
         rustdesk
+        ffmpeg
     ]); 
 }
