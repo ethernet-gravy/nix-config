@@ -19,10 +19,6 @@
     enable = true;
     enable32Bit = true;
   };
-  hardware.amdgpu.amdvlk = {
-        enable = true;
-        support32Bit.enable = true;
-    };
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/9cb85c8d-bdc8-422e-92ce-38ea402923f5";
