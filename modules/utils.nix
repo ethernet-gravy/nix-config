@@ -57,5 +57,6 @@
         texlivePackages.wrapfig
         rustdesk
         ffmpeg
+        obs-studio
     ]); 
 }
