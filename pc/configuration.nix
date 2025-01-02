@@ -8,13 +8,14 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       #inputs.home-manager.nixosModules.default
+      #../modules/kvm.nix
     ];
   # Set your time zone.
    time.timeZone = "America/Winnipeg";
-   specialisation.VFIO.configuration = {
-        options.vfio.enable = true;
-   };
-
+   #specialisation.VFIO.configuration = {
+   #     vfio.enable = true;
+   #};
+   
    nix.settings.auto-optimise-store = true;
 
   # Configure network proxy if necessary

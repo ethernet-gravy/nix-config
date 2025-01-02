@@ -17,6 +17,11 @@
         hyprcursor
         cliphist
         inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+        kdePackages.qtwayland
+        kdePackages.qtsvg
+        kdePackages.kio-fuse
+        kdePackages.kio-extras
+        kdePackages.breeze-icons
     ];
     environment.sessionVariables = {
         NIXOS_OZONE_WL = "1";

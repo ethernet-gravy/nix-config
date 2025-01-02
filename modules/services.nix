@@ -21,6 +21,7 @@
         serviceConfig = {
             Type = "simple";
             ExecStart = ''${pkgs.onedrive}/bin/onedrive --monitor'';
+            Restart = "on-failure";
         };
         wantedBy = [ "default.target" ]; # starts after login
     };

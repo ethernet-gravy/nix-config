@@ -57,6 +57,10 @@
         texlivePackages.wrapfig
         rustdesk
         ffmpeg
-        obs-studio
+        (wrapOBS {
+            plugins = with obs-studio-plugins; [
+                droidcam-obs
+            ];
+         })
     ]); 
 }

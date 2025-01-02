@@ -89,7 +89,7 @@
             ./modules/network.nix
             ./modules/rust.nix
             ./modules/amd.nix
-            ./modules/kvm.nix
+            #./modules/kvm.nix
          ];
       };
     };

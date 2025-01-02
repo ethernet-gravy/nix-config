@@ -12,7 +12,11 @@
   boot.initrd.kernelModules = [ "amdgpu"];
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = [ ];
+  boot.extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ];
+  boot.extraModprobeConfig = ''
+    options v412loopback devices=1 video_nr=1 card_label="Android Camera" exclusive_caps=1
+  '';
+  security.polkit.enable = true;
   boot.supportedFilesystems =[ "ntfs" ];
   hardware.enableRedistributableFirmware = true;                                                                                                                                                                   
   hardware.graphics ={
