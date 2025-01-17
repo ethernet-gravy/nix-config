@@ -9,4 +9,8 @@
     ClassicBondedOnly = true;
   };
 };
+
+    environment.systemPackages = with pkgs; [
+        bluetuith
+    ];
 }
