@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "flake-compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1733328505,
+        "narHash": "sha256-NeCCThCEP3eCl2l/+27kNNK7QrwZB1IJCrXfrbv5oqU=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "ff81ac966bb2cae68946d5ed5fc4994f96d0ffec",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -43,13 +59,34 @@
         "type": "github"
       }
     },
+    "nix-matlab": {
+      "inputs": {
+        "flake-compat": "flake-compat",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1737126119,
+        "narHash": "sha256-lpYq/WhpjjCI5QMXUTV+/kxMAeYePF+rabN3ccjdCVA=",
+        "owner": "doronbehar",
+        "repo": "nix-matlab",
+        "rev": "f6b244e6a1938c0cb250d105bc25044ed18f8126",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "doronbehar",
+        "repo": "nix-matlab",
+        "type": "gitlab"
+      }
+    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1736420959,
-        "narHash": "sha256-dMGNa5UwdtowEqQac+Dr0d2tFO/60ckVgdhZU9q2E2o=",
+        "lastModified": 1737003892,
+        "narHash": "sha256-RCzJE9wKByLCXmRBp+z8LK9EgdW+K+W/DXnJS4S/NVo=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "32af3611f6f05655ca166a0b1f47b57c762b5192",
+        "rev": "ae06b9c2d83cb5c8b12d7d0e32692e93d1379713",
         "type": "github"
       },
       "original": {
@@ -62,6 +99,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "nix-matlab": "nix-matlab",
         "nixpkgs": "nixpkgs",
         "rose-pine-hyprcursor": "rose-pine-hyprcursor",
         "rust-overlay": "rust-overlay"
@@ -96,11 +134,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1736649126,
-        "narHash": "sha256-XCw5sv/ePsroqiF3lJM6Y2X9EhPdHeE47gr3Q8b0UQw=",
+        "lastModified": 1737166965,
+        "narHash": "sha256-vlDROBAgq+7PEVM0vaS2zboY6DXs3oKK0qW/1dVuFs4=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "162ab0edc2936508470199b2e8e6c444a2535019",
+        "rev": "fc839c9d5d1ebc789b4657c43c4d54838c7c01de",
         "type": "github"
       },
       "original": {

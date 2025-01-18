@@ -2,6 +2,15 @@
   description = "Nix Config";
 
   inputs = {
+
+  nix-matlab = {
+    # nix-matlab's Nixpkgs input follows Nixpkgs' nixos-unstable branch. However
+    # your Nixpkgs revision might not follow the same branch. You'd want to
+    # match your Nixpkgs and nix-matlab to ensure fontconfig related
+    # compatibility.
+    inputs.nixpkgs.follows = "nixpkgs";
+    url = "gitlab:doronbehar/nix-matlab";
+  };
     # Nixpkgs
 #    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
 #    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -30,9 +39,13 @@
     #home-manager,
     #stylix,
     rust-overlay,
+    nix-matlab,
     ...
   } @ inputs: let
     inherit (self) outputs;
+    flake_overlays = [
+        nix-matlab.overlay
+    ];
     #system = "x86_64-linux";
   in {
     # NixOS configuration entrypoint
@@ -62,6 +75,7 @@
             ./modules/network.nix
             ./modules/rust.nix
             ./modules/bluetooth.nix
+            (import ./modules/matlab.nix flake_overlays)
          ];
       };
       pc = nixpkgs.lib.nixosSystem {
@@ -89,6 +103,7 @@
             ./modules/network.nix
             ./modules/rust.nix
             ./modules/amd.nix
+            (import ./modules/matlab.nix flake_overlays)
             #./modules/kvm.nix
          ];
       };
