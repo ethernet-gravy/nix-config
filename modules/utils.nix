@@ -53,11 +53,14 @@
         freecad
         kicad
         bambu-studio
+        texlab
         (pkgs.texlive.combine {
         inherit (pkgs.texlive) scheme-basic
           dvisvgm dvipng # for preview and export as html
-          wrapfig amsmath ulem hyperref capt-of;
-        })
+          wrapfig amsmath ulem hyperref capt-of
+          latexmk titlesec listings caption float subfig
+          etoolbox xcolor enumitem collection-fontsrecommended;
+       })
         rustdesk
         ffmpeg
         (wrapOBS {

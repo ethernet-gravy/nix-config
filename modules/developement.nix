@@ -16,4 +16,6 @@
     programs = {
         neovim.defaultEditor = true;
     };
+
+    services.emacs.enable = true;
 }

@@ -9,6 +9,8 @@
  # Enable CUPS to print documents.
     services.printing.enable = true;
 
+    services.hypridle.enable = false;
+
 
 
    environment.systemPackages = (with pkgs; [
