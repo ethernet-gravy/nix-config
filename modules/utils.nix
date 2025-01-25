@@ -52,7 +52,7 @@
         ipe
         freecad
         kicad
-        bambu-studio
+        #bambu-studio
         texlab
         (pkgs.texlive.combine {
         inherit (pkgs.texlive) scheme-basic
@@ -61,7 +61,7 @@
           latexmk titlesec listings caption float subfig
           etoolbox xcolor enumitem collection-fontsrecommended;
        })
-        rustdesk
+        #rustdesk
         ffmpeg
         (wrapOBS {
             plugins = with obs-studio-plugins; [
