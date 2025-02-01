@@ -39,7 +39,6 @@
             withOpenASAR = false;
             withVencord = true;
             })
-        vesktop
         telegram-desktop
         zathura
         wl-clipboard
