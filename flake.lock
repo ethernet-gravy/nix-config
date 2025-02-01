@@ -67,11 +67,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1737730913,
-        "narHash": "sha256-nKgjcBnuVUQs74C2ovDcYaEIA1UBJN3V2t7zUtNPEbA=",
+        "lastModified": 1738335709,
+        "narHash": "sha256-wcT84soUqvEtGOGqmcGB5aK/cIBLDK6lbiz9+i5MJiU=",
         "owner": "doronbehar",
         "repo": "nix-matlab",
-        "rev": "0b103bc952c0118dbb1ae765f1f20046a3f10ba2",
+        "rev": "5deca2427863920479ddc732a86090bbec364ad5",
         "type": "gitlab"
       },
       "original": {
@@ -82,11 +82,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1737632463,
-        "narHash": "sha256-38J9QfeGSej341ouwzqf77WIHAScihAKCt8PQJ+NH28=",
+        "lastModified": 1738142207,
+        "narHash": "sha256-NGqpVVxNAHwIicXpgaVqJEJWeyqzoQJ9oc8lnK9+WC4=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "0aa475546ed21629c4f5bbf90e38c846a99ec9e9",
+        "rev": "9d3ae807ebd2981d593cddd0080856873139aa40",
         "type": "github"
       },
       "original": {
@@ -134,11 +134,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1737685583,
-        "narHash": "sha256-p+NVABRpGi+pT+xxf9HcLcFVxG6L+vEEy+NwzB9T0f8=",
+        "lastModified": 1738290352,
+        "narHash": "sha256-YKOHUmc0Clm4tMV8grnxYL4IIwtjTayoq/3nqk0QM7k=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "eb64cbcc8eee0fa87ebded92805280d2ec97415a",
+        "rev": "b031b584125d33d23a0182f91ddbaf3ab4880236",
         "type": "github"
       },
       "original": {
