@@ -14,17 +14,18 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/5d346807-3355-41db-a029-6cb5abc399d8";
+    { device = "/dev/disk/by-uuid/849396d5-ada9-47a2-a70c-c550cda7a873";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/7E91-695A";
+    { device = "/dev/disk/by-uuid/1657-25E2";
       fsType = "vfat";
+      options = [ "fmask=0077" "dmask=0077" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/f3658ea7-3184-48f9-af0f-26c4dc1d559d"; }
+    [ { device = "/dev/disk/by-uuid/2f6eeede-2d0a-4a5f-97c8-95e3677a1050"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -33,14 +34,13 @@
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp0s31f6.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp58s0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.wlp2s0.useDHCP = lib.mkDefault true;
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
         intel-media-sdk
     ];
   };
-
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
