@@ -28,9 +28,8 @@
         wantedBy = [ "default.target" ]; # starts after login
     };
 
-
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+   services.xserver.libinput.enable = true;
 
 
 }

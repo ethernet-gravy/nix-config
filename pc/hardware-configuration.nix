@@ -12,7 +12,6 @@
   boot.initrd.kernelModules = [ "amdgpu"];
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ "kvm-amd" ];
-  security.polkit.enable = true;
   boot.supportedFilesystems =[ "ntfs" ];
   hardware.enableRedistributableFirmware = true;                                                                                                                                                                   
   hardware.graphics ={
