@@ -103,6 +103,7 @@
             ./modules/network.nix
             ./modules/rust.nix
             ./modules/amd.nix
+            ./modules/kicad.nix
             (import ./modules/matlab.nix flake_overlays)
             #./modules/kvm.nix
          ];

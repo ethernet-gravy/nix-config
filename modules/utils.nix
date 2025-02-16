@@ -25,7 +25,7 @@
         slurp
         ripgrep
         swappy
-        # cava
+        cava
         yazi
         dolphin
         imv
@@ -50,8 +50,7 @@
         qmk
         ipe
         freecad
-        kicad
-        #bambu-studio
+        bambu-studio
         texlab
         (pkgs.texlive.combine {
         inherit (pkgs.texlive) scheme-basic
@@ -60,11 +59,11 @@
           latexmk titlesec listings caption float subfig
           etoolbox xcolor enumitem collection-fontsrecommended;
        })
-        #rustdesk
         ffmpeg
         (wrapOBS {
             plugins = with obs-studio-plugins; [
                 droidcam-obs
+                obs-vaapi
             ];
          })
     ]); 
