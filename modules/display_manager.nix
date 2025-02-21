@@ -39,5 +39,5 @@
     services.xserver.displayManager.startx.enable = true;
     services.displayManager.autoLogin.enable = true;
     services.displayManager.autoLogin.user = "nakul";
-    services.displayManager.defaultSession = "hyprland-uwsm";
+    services.displayManager.defaultSession = "hyprland";
 }

@@ -63,7 +63,8 @@
         ffmpeg
         (wrapOBS {
             plugins = with obs-studio-plugins; [
-                droidcam-obs
+#droidcam currently broken
+                #droidcam-obs
                 obs-vaapi
             ];
          })
