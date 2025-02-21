@@ -51,6 +51,7 @@
         ipe
         freecad
         bambu-studio
+        styluslabs-write
         texlab
         (pkgs.texlive.combine {
         inherit (pkgs.texlive) scheme-basic
