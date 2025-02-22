@@ -8,7 +8,7 @@
         neovide
         nodejs
         obsidian
-        emacs
+        emacs29-pgtk
     ];
     environment.sessionVariables = {
         EDITOR = "nvim";
