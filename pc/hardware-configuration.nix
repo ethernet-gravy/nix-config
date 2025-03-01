@@ -29,15 +29,14 @@
       fsType = "vfat";
     };
 
-  fileSystems."/home/nakul/windir" = {
+  fileSystems."/windir" = {
       device = "/dev/sda1";
       fsType = "ntfs-3g";
       options = ["rw" "uid=1000" ];
   };
-  fileSystems."/home/nakul/game-drive" = {
+  fileSystems."/game-drive" = {
       device = "/dev/nvme0n1p2";
-      fsType = "ntfs-3g";
-      options = ["rw" "uid=1000" ];
+      fsType = "ext4";
   };
   swapDevices = [ ];
 
