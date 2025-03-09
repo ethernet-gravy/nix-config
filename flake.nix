@@ -78,6 +78,16 @@
             (import ./modules/matlab.nix flake_overlays)
          ];
       };
+      server = nixpkgs.lib.nixosSystem {
+          specialArgs = {
+              inherit inputs outputs;
+          };
+          modules = [
+          ./server/configuration.nix
+#          ./modules/zsh.nix
+          ./modules/developement.nix
+          ];
+      };
       pc = nixpkgs.lib.nixosSystem {
         specialArgs = {
             inherit inputs outputs;
