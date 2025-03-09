@@ -27,7 +27,7 @@
         swappy
         cava
         yazi
-        dolphin
+        kdePackages.dolphin
         imv
         mpv
         #mako # notifications
@@ -48,17 +48,20 @@
         brightnessctl
         btop
         qmk
+        piper
+        libratbag
         ipe
         freecad
         bambu-studio
         styluslabs-write
         texlab
         (pkgs.texlive.combine {
-        inherit (pkgs.texlive) scheme-basic
+        inherit (pkgs.texlive) scheme-medium
           dvisvgm dvipng # for preview and export as html
           wrapfig amsmath ulem hyperref capt-of
           latexmk titlesec listings caption float subfig
-          etoolbox xcolor enumitem collection-fontsrecommended;
+          etoolbox xcolor enumitem collection-fontsrecommended
+          mylatexformat;
        })
         ffmpeg
         (wrapOBS {

@@ -6,12 +6,15 @@
         tree-sitter
         gcc
         neovide
-        nodejs
+        #nodejs
+        python3
+        cmake
         obsidian
-        emacs29-pgtk
+        emacs30-pgtk
     ];
     environment.sessionVariables = {
         EDITOR = "nvim";
+        DOOMDIR = "~/.config/doom/";
     };
     programs = {
         neovim.defaultEditor = true;

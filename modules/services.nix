@@ -11,13 +11,14 @@
 
     services.hypridle.enable = false;
 
+    services.ratbagd.enable = true;
 
 
    environment.systemPackages = (with pkgs; [
         onedrive
    ]); 
    systemd.user.services.custom-enable-onedrive = {
-        enable = true;
+        enable = false;
         after = ["network.service"];
         description = "...";
         serviceConfig = {

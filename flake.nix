@@ -86,6 +86,7 @@
           ./server/configuration.nix
 #          ./modules/zsh.nix
           ./modules/developement.nix
+          ./modules/sync.nix
           ];
       };
       pc = nixpkgs.lib.nixosSystem {
@@ -108,6 +109,7 @@
             ./modules/utils.nix
             ./modules/hyprland.nix
             ./modules/services.nix
+            ./modules/sync.nix
             ./modules/x11.nix
             ./modules/zsh.nix
             ./modules/network.nix
