@@ -89,6 +89,7 @@ services.openssh = {
     ];
   };
 
+
   # Install firefox.
   programs.firefox.enable = true;
 
@@ -102,7 +103,6 @@ services.openssh = {
   #  wget
      git
      gh
-
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
