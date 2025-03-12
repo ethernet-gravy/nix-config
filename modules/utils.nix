@@ -3,13 +3,14 @@
 #  stable = import inputs.nixpkgs-stable { config = config.nixpkgs.config // { allowUnfree = true; }; };
 #in 
 {
-     
      boot.plymouth.enable = true;
     environment.localBinInPath = true;
     environment.systemPackages = (with pkgs; [
         wget
         git
         libreoffice
+        glxinfo
+        vulkan-tools
         gnumake
         fzf
         gh
