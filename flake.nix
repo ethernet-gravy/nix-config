@@ -75,6 +75,7 @@
             ./modules/network.nix
             ./modules/rust.nix
             ./modules/bluetooth.nix
+            ./modules/corectrl.nix
             (import ./modules/matlab.nix flake_overlays)
          ];
       };
@@ -98,6 +99,7 @@
         # modules = [./nixos/configuration.nix];
          modules = [
             ./pc/configuration.nix
+            ./modules/corectrl.nix
             ./modules/audio.nix
             ./modules/rear-audio-jack-fix.nix
             ./modules/bootloader.nix
