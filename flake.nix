@@ -69,6 +69,7 @@
             ./modules/fonts.nix
             ./modules/users.nix
             ./modules/utils.nix
+            ./modules/sync.nix
             ./modules/hyprland.nix
             ./modules/services.nix
             ./modules/zsh.nix
