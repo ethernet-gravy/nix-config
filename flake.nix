@@ -36,7 +36,7 @@
   outputs = {
     self,
     nixpkgs,
-    #home-manager,
+    home-manager,
     #stylix,
     rust-overlay,
     nix-matlab,
