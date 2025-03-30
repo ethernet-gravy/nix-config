@@ -15,6 +15,13 @@
         CPU_MAX_PERF_ON_BAT = 70;
 
 
+
+
+        INTEL_GPU_MIN_FREQ_ON_AC=900;
+        INTEL_GPU_MIN_FREQ_ON_BAT=700;
+        INTEL_GPU_MAX_FREQ_ON_AC=1150;
+        INTEL_GPU_MAX_FREQ_ON_BAT=1150;
+
       };
 };
 }
