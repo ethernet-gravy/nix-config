@@ -63,6 +63,7 @@
          modules = [
             ./laptop/configuration.nix
             ./modules/audio.nix
+            ./modules/tlp.nix
             ./modules/bootloader.nix
             ./modules/developement.nix
             ./modules/display_manager.nix
