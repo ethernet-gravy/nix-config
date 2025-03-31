@@ -25,7 +25,7 @@
     ];
     environment.sessionVariables = {
         NIXOS_OZONE_WL = "1";
-        WLR_NO_HARDWARE_CURSORS = "1"; # Depreceated in latest hyprland, still keeping it just in case
+        AQ_NO_HARDWARE_CURSORS = "1"; # Depreceated in latest hyprland, still keeping it just in case
     };
     security.polkit.enable = true;
     
