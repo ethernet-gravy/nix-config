@@ -58,6 +58,7 @@
         styluslabs-write
         texlab
         ouch #obvious unified compression helper
+        simple-mtpfs
         (pkgs.texlive.combine {
         inherit (pkgs.texlive) scheme-medium
           dvisvgm dvipng # for preview and export as html
