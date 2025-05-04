@@ -54,8 +54,10 @@
         ipe
         freecad
         bambu-studio
+        chezmoi
         styluslabs-write
         texlab
+        ouch #obvious unified compression helper
         (pkgs.texlive.combine {
         inherit (pkgs.texlive) scheme-medium
           dvisvgm dvipng # for preview and export as html
