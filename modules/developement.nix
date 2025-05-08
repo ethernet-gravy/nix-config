@@ -9,6 +9,7 @@
         #nodejs
         python3
         cmake
+        ccls
         obsidian
         emacs30-pgtk
     ];
