@@ -5,6 +5,7 @@
         lua51Packages.jsregexp
         tree-sitter
         gcc
+        clang #probably won't hurt to have both. probably.
         neovide
         #nodejs
         python3
