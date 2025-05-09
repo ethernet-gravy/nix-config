@@ -8,36 +8,28 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "ahci" "usb_storage" "usbhid" "sd_mod" ];
-  boot.initrd.kernelModules = [ "amdgpu"];
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "ahci" "usbhid" "usb_storage" "sd_mod" ];
+  boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
-  boot.supportedFilesystems =[ "ntfs" ];
-  hardware.enableRedistributableFirmware = true;                                                                                                                                                                   
-  hardware.graphics ={
-    enable = true;
-    enable32Bit = true;
-  };
+  boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/9cb85c8d-bdc8-422e-92ce-38ea402923f5";
-      fsType = "ext4";
+    { device = "/dev/disk/by-uuid/a60d82d6-7a78-497c-9e28-609a70b98224";
+      fsType = "btrfs";
+      options = [ "subvol=@" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/FF96-40FC";
+    { device = "/dev/disk/by-uuid/3554-4C57";
       fsType = "vfat";
+      options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  fileSystems."/windir" = {
-      device = "/dev/sda1";
-      fsType = "ntfs-3g";
-      options = ["rw" "uid=1000" ];
-  };
-  fileSystems."/game-drive" = {
-      device = "/dev/nvme0n1p2";
-      fsType = "ext4";
-  };
+  fileSystems."/windir" =
+    { device = "/dev/disk/by-uuid/84b54006-9d96-4a5d-a08c-d813051917b3";
+      fsType = "btrfs";
+    };
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
