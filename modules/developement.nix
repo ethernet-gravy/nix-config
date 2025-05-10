@@ -13,6 +13,8 @@
         ccls
         obsidian
         emacs30-pgtk
+        man-pages
+        man-pages-posix
     ];
     environment.sessionVariables = {
         EDITOR = "nvim";
