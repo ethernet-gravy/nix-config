@@ -16,6 +16,7 @@
         man-pages
         man-pages-posix
     ];
+    documentation.dev.enable = true; #man pages for all my libraries.
     environment.sessionVariables = {
         EDITOR = "nvim";
         DOOMDIR = "~/.config/doom/";
