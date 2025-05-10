@@ -26,7 +26,7 @@
     };
 
   fileSystems."/windir" =
-    { device = "/dev/disk/by-uuid/84b54006-9d96-4a5d-a08c-d813051917b3";
+    { device = "/dev/sda1";
       fsType = "btrfs";
     };
 

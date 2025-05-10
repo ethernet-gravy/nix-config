@@ -7,7 +7,7 @@
         gcc
         clang #probably won't hurt to have both. probably.
         neovide
-        #nodejs
+        nodejs
         python3
         cmake
         ccls
