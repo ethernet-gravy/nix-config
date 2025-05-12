@@ -6,6 +6,7 @@
         tree-sitter
         gcc
         clang #probably won't hurt to have both. probably.
+        valgrind
         neovide
         nodejs
         python3
