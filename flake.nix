@@ -2,7 +2,7 @@
   description = "Nix Config";
 
   inputs = {
-
+    openconnect-pulse-launcher.url = "github:erahhal/openconnect-pulse-launcher";
   nix-matlab = {
     # nix-matlab's Nixpkgs input follows Nixpkgs' nixos-unstable branch. However
     # your Nixpkgs revision might not follow the same branch. You'd want to

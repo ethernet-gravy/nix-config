@@ -96,11 +96,46 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1738574474,
+        "narHash": "sha256-rvyfF49e/k6vkrRTV4ILrWd92W+nmBDfRYZgctOyolQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "fecfeb86328381268e29e998ddd3ebc70bbd7f7c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-24.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "openconnect-pulse-launcher": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1745426076,
+        "narHash": "sha256-SkL+Njo2xthLy+n+TozpDOJJlzZaXcWDd71HUABUN+A=",
+        "owner": "erahhal",
+        "repo": "openconnect-pulse-launcher",
+        "rev": "aa03b1d2e83a82a63916b7a6b984e8ca4ddc437e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "erahhal",
+        "repo": "openconnect-pulse-launcher",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "nix-matlab": "nix-matlab",
         "nixpkgs": "nixpkgs",
+        "openconnect-pulse-launcher": "openconnect-pulse-launcher",
         "rose-pine-hyprcursor": "rose-pine-hyprcursor",
         "rust-overlay": "rust-overlay"
       }

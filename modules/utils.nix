@@ -38,8 +38,9 @@
         (pkgs.discord.override {
             # remove any overrides that you don't want
             withOpenASAR = false;
-            withVencord = true;
+            withVencord = false;
             })
+        vesktop
         telegram-desktop
         zathura
         wl-clipboard
@@ -52,6 +53,8 @@
         piper
         libratbag
         ipe
+        openconnect
+        inputs.openconnect-pulse-launcher.packages."${pkgs.system}".openconnect-pulse-launcher
         freecad
         bambu-studio
         chezmoi
