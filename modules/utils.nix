@@ -61,6 +61,7 @@
         styluslabs-write
         texlab
         ouch #obvious unified compression helper
+        libnotify
         simple-mtpfs
         (pkgs.texlive.combine {
         inherit (pkgs.texlive) scheme-medium
