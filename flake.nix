@@ -73,7 +73,7 @@
             ./modules/sync.nix
             ./modules/hyprland.nix
             ./modules/services.nix
-            ./modules/zsh.nix
+            ./modules/fish.nix
             ./modules/network.nix
             ./modules/rust.nix
             ./modules/bluetooth.nix
@@ -87,7 +87,7 @@
           };
           modules = [
           ./server/configuration.nix
-#          ./modules/zsh.nix
+#          ./modules/fish.nix
           ./modules/developement.nix
           ./modules/sync.nix
           ];
@@ -115,7 +115,7 @@
             ./modules/services.nix
             ./modules/sync.nix
             ./modules/x11.nix
-            ./modules/zsh.nix
+            ./modules/fish.nix
             ./modules/network.nix
             ./modules/rust.nix
             ./modules/amd.nix

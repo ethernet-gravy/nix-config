@@ -14,6 +14,7 @@
         xorg.xhost
     ]);
     programs.steam.enable = true;
+    programs.steam.extraCompatPackages = [pkgs.proton-ge-bin];
     programs.gamemode.enable = true;
     nixpkgs.config.packageOverrides = pkgs: {
         steam = pkgs.steam.override {

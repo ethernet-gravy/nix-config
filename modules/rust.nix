@@ -6,7 +6,7 @@
     ];
     environment.systemPackages = with pkgs; [
         (rust-bin.fromRustupToolchainFile ./rust-toolchain.toml)
-        lldb_16
+        lldb
         taplo #toml formatter & lsp
         bacon
         cargo-generate

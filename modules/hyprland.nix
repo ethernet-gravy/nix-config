@@ -22,6 +22,7 @@
         kdePackages.kio-fuse
         kdePackages.kio-extras
         kdePackages.breeze-icons
+        kdePackages.qtwebview
     ];
     environment.sessionVariables = {
         NIXOS_OZONE_WL = "1";
