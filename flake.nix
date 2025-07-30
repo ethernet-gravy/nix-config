@@ -118,6 +118,7 @@
             ./modules/fish.nix
             ./modules/network.nix
             ./modules/rust.nix
+            ./modules/rustdesk.nix
             ./modules/amd.nix
             ./modules/kicad.nix
             (import ./modules/matlab.nix flake_overlays)
