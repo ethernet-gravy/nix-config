@@ -56,7 +56,6 @@
         openconnect
         inputs.openconnect-pulse-launcher.packages."${pkgs.system}".openconnect-pulse-launcher
         freecad
-        bambu-studio
         chezmoi
         styluslabs-write
         texlab
@@ -80,4 +79,7 @@
             ];
          })
     ]); 
+
+
 }
+
