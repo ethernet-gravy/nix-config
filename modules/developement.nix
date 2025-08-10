@@ -14,6 +14,8 @@
         ccls
         obsidian
         emacs30-pgtk
+        libvterm
+        libtool #stuff for emac
         man-pages
         man-pages-posix
     ];
