@@ -27,7 +27,6 @@
         ripgrep
         swappy
         cava
-        yazi
         kdePackages.dolphin
         imv
         mpv
@@ -80,6 +79,13 @@
          })
     ]); 
 
+    programs.yazi.enable = true;
+
+    nixpkgs.config.packageOverrides = pkgs: {
+        yazi = pkgs.yazi.override  {
+            _7zz = pkgs._7zz-rar; 
+            };
+    };
 
 }
 
