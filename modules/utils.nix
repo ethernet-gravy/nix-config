@@ -60,6 +60,7 @@
         texlab
         ouch #obvious unified compression helper
         libnotify
+        orca-slicer
         simple-mtpfs
         (pkgs.texlive.combine {
         inherit (pkgs.texlive) scheme-medium
