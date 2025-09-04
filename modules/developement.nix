@@ -19,12 +19,16 @@
     ];
     documentation.dev.enable = true; #man pages for all my libraries.
     environment.sessionVariables = {
-        EDITOR = "nvim";
         DOOMDIR = "~/.config/doom/";
     };
-    programs = {
-        neovim.defaultEditor = true;
+
+    programs.direnv = {
+        enable = true;
+        nix-direnv.enable = true;
     };
 
-    services.emacs.enable = true;
+    services.emacs = {
+        enable = true;
+        defaultEditor = true;
+    };
 }
