@@ -25,7 +25,7 @@
         grimblast
         slurp
         ripgrep
-        swappy
+        satty
         cava
         kdePackages.dolphin
         imv
