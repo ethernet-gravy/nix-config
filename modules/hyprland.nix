@@ -12,7 +12,6 @@
         pywal
         hyprpaper
         hyprlock
-        inputs.iio-hyprland.packages.${pkgs.system}.default
         hypridle
         hyprpicker
         hyprcursor
@@ -25,6 +24,7 @@
         kdePackages.breeze-icons
         kdePackages.qtwebview
     ];
+    programs.iio-hyprland.enable = true;
     environment.sessionVariables = {
         NIXOS_OZONE_WL = "1";
         AQ_NO_HARDWARE_CURSORS = "1"; # Depreceated in latest hyprland, still keeping it just in case
