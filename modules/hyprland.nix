@@ -12,6 +12,7 @@
         pywal
         hyprpaper
         hyprlock
+        inputs.iio-hyprland.packages.${pkgs.system}.default
         hypridle
         hyprpicker
         hyprcursor
