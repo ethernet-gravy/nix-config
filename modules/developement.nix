@@ -9,7 +9,7 @@
         valgrind
         neovide
         cmake
-        ccls
+        clangd
         obsidian
         emacs30-pgtk
         libvterm
