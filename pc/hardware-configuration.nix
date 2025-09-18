@@ -13,6 +13,8 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/a60d82d6-7a78-497c-9e28-609a70b98224";
       fsType = "btrfs";

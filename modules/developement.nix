@@ -6,16 +6,17 @@
         tree-sitter
         gcc
         clang #probably won't hurt to have both. probably.
+        clang-tools
         valgrind
         neovide
         cmake
-        clangd
         obsidian
         emacs30-pgtk
         libvterm
         libtool #stuff for emac
         man-pages
         man-pages-posix
+        mermaid-cli #for UML Diagrams
     ];
     documentation.dev.enable = true; #man pages for all my libraries.
     environment.sessionVariables = {
