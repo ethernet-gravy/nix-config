@@ -7,6 +7,6 @@
   services.gnome.gnome-keyring.enable = true; # secret service
   security.pam.services.swaylock = {};
 
-  environment.systemPackages = with pkgs; [ swaylock mako swayidle ];
+  environment.systemPackages = with pkgs; [ swaylock mako swayidle xwayland-satellite ];
 
 }
