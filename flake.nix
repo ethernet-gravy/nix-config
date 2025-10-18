@@ -78,6 +78,7 @@
             ./modules/rust.nix
             ./modules/bluetooth.nix
             ./modules/corectrl.nix
+            ./modules/niri.nix
             (import ./modules/matlab.nix flake_overlays)
          ];
       };
@@ -121,6 +122,7 @@
             ./modules/rustdesk.nix
             ./modules/amd.nix
             ./modules/kicad.nix
+            ./modules/niri.nix
             (import ./modules/matlab.nix flake_overlays)
             #./modules/kvm.nix
          ];

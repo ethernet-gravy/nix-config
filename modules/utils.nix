@@ -16,7 +16,7 @@
         gh
         stow
         udiskie
-        rofi-wayland
+        walker        
         zip
         unzip
         ncmpcpp
@@ -31,14 +31,9 @@
         imv
         mpv
         #mako # notifications
-        dunst
+        #dunst
         qbittorrent
         keepassxc
-        (pkgs.discord.override {
-            # remove any overrides that you don't want
-            withOpenASAR = false;
-            withVencord = false;
-            })
         vesktop
         telegram-desktop
         zathura
