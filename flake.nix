@@ -79,6 +79,7 @@
             ./modules/bluetooth.nix
             ./modules/corectrl.nix
             ./modules/niri.nix
+            ./modules/teams.nix
             (import ./modules/matlab.nix flake_overlays)
          ];
       };
@@ -123,6 +124,7 @@
             ./modules/amd.nix
             ./modules/kicad.nix
             ./modules/niri.nix
+            ./modules/teams.nix
             (import ./modules/matlab.nix flake_overlays)
             #./modules/kvm.nix
          ];

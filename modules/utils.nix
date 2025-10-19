@@ -52,6 +52,7 @@
         freecad
         chezmoi
         styluslabs-write
+        xournalpp # write but better, gonna keep both, see which one i like more.
         texlab
         ouch #obvious unified compression helper
         libnotify
