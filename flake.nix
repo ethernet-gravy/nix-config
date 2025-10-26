@@ -80,6 +80,7 @@
             ./modules/corectrl.nix
             ./modules/niri.nix
             ./modules/teams.nix
+            ./modules/music-player-sync.nix
             (import ./modules/matlab.nix flake_overlays)
          ];
       };
@@ -125,6 +126,7 @@
             ./modules/kicad.nix
             ./modules/niri.nix
             ./modules/teams.nix
+            ./modules/music-player-sync.nix
             (import ./modules/matlab.nix flake_overlays)
             #./modules/kvm.nix
          ];
