@@ -16,32 +16,23 @@
         gh
         stow
         udiskie
-        walker        
         zip
         unzip
         ncmpcpp
         strawberry
-        grim
-        grimblast
-        slurp
         ripgrep
-        satty
         cava
         kdePackages.dolphin
         imv
         mpv
-        #mako # notifications
-        #dunst
         qbittorrent
         keepassxc
         vesktop
         telegram-desktop
         zathura
-        wl-clipboard
         jq
         wgnord
         nicotine-plus
-        brightnessctl
         btop
         qmk
         piper
@@ -52,10 +43,10 @@
         freecad
         chezmoi
         styluslabs-write
-        xournalpp # write but better, gonna keep both, see which one i like more.
+        #xournalpp # write but better, gonna keep both, see which one i like more.
+        rnote # okay so both suck. this one's better
         texlab
         ouch #obvious unified compression helper
-        libnotify
         orca-slicer
         simple-mtpfs
         (pkgs.texlive.combine {

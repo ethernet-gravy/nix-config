@@ -25,6 +25,20 @@
         url = "github:ndom91/rose-pine-hyprcursor";
         inputs.nixpkgs.follows = "nixpkgs";
     };
+    stasis = {
+      url ="github:saltnpepper97/stasis";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    quickshell = {
+      url = "github:outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.quickshell.follows = "quickshell";  # Use same quickshell version
+    };
 
     # Home manager
     home-manager = {
@@ -79,6 +93,7 @@
             ./modules/bluetooth.nix
             ./modules/corectrl.nix
             ./modules/niri.nix
+            ./modules/wayland-utils.nix
             ./modules/teams.nix
             ./modules/music-player-sync.nix
             (import ./modules/matlab.nix flake_overlays)
@@ -125,6 +140,7 @@
             ./modules/amd.nix
             ./modules/kicad.nix
             ./modules/niri.nix
+            ./modules/wayland-utils.nix
             ./modules/teams.nix
             ./modules/music-player-sync.nix
             (import ./modules/matlab.nix flake_overlays)
