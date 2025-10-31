@@ -9,7 +9,6 @@
         kitty 
         waybar
         hyprpaper
-        hyprlock
         hypridle
         hyprpicker
         hyprcursor
