@@ -7,6 +7,7 @@
         gcc
         clang #probably won't hurt to have both. probably.
         clang-tools
+        vscode-langservers-extracted # html-css servers
         valgrind
         neovide
         cmake
