@@ -18,6 +18,7 @@
     swaybg
     pywal
     ghostty
+    xdg-desktop-portal-gnome
     wl-clipboard
     brightnessctl
     libnotify
