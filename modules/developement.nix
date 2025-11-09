@@ -12,7 +12,7 @@
         neovide
         cmake
         obsidian
-        emacs30-pgtk
+        emacs
         libvterm
         libtool #stuff for emac
         man-pages
@@ -32,5 +32,6 @@
     services.emacs = {
         enable = true;
         defaultEditor = true;
+        startWithGraphical = true;
     };
 }
