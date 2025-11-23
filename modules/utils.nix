@@ -9,7 +9,7 @@
         wget
         git
         libreoffice
-        glxinfo
+        mesa-demos
         vulkan-tools
         gnumake
         fzf
