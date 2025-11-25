@@ -75,5 +75,6 @@
             };
     };
 
+    programs.coolercontrol.enable = true;
 }
 
