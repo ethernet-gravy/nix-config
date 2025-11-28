@@ -26,7 +26,7 @@ music_folder="/home/nakul/Music/"
 [ -d "$usb_folder" ] || exit 0
 [ -d "$music_folder" ] || exit 0
 
-${pkgs.rsync}/bin/rsync -av --no-owner --no-group --ignore-existing --size-only --delete-after --exclude ".stfolder/" --exclude ".rockbox/" "$music_folder" "$usb_folder"
+${pkgs.rsync}/bin/rsync -av --no-owner --no-group --ignore-existing --size-only --delete-after --exclude ".stfolder/" --exclude ".rockbox/" --exclude "*.bmark" "$music_folder" "$usb_folder"
 
 ''}/bin/sync_music_player'';
     };
