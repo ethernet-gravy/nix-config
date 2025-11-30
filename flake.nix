@@ -85,7 +85,7 @@
             ./modules/users.nix
             ./modules/utils.nix
             ./modules/sync.nix
-            ./modules/hyprland.nix
+            #./modules/hyprland.nix
             ./modules/services.nix
             ./modules/fish.nix
             ./modules/network.nix
@@ -129,7 +129,7 @@
             ./modules/gaming.nix
             ./modules/users.nix
             ./modules/utils.nix
-            ./modules/hyprland.nix
+            # ./modules/hyprland.nix
             ./modules/services.nix
             ./modules/sync.nix
             ./modules/x11.nix
