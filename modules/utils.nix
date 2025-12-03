@@ -55,7 +55,7 @@
           wrapfig amsmath ulem hyperref capt-of
           latexmk titlesec listings caption float subfig
           etoolbox xcolor enumitem collection-fontsrecommended
-          mylatexformat cancel;
+          mylatexformat cancel preview;
        })
         ffmpeg
         (wrapOBS {
