@@ -1,7 +1,6 @@
 {pkgs, ... }:
 {
     environment.systemPackages = with pkgs; [
-        neovim
         lua51Packages.jsregexp
         tree-sitter
         #gcc
@@ -29,8 +28,13 @@
         nix-direnv.enable = true;
     };
 
+programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+};
+    
     services.emacs = {
-        enable = true;
-        defaultEditor = true;
+        enable = false;
+        defaultEditor = false;
     };
 }

@@ -3,6 +3,7 @@
     environment.systemPackages = (with pkgs; [
         wineWowPackages.stable
         winetricks
+        pkgsCross.mingw32.wine-discord-ipc-bridge
         lutris
         protontricks
         heroic
