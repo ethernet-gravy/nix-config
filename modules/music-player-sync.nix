@@ -25,9 +25,9 @@ music_folder="/home/nakul/Music/"
 # exit if the usb and music folders don't exist
 [ -d "$usb_folder" ] || exit 0
 [ -d "$music_folder" ] || exit 0
-
+${pkgs.libnotify}/bin/notify-send "Syncing music library to EROS Q"
 ${pkgs.rsync}/bin/rsync -av --no-owner --no-group --ignore-existing --size-only --delete-after --exclude ".stfolder/" --exclude ".rockbox/" --exclude "*.bmark" "$music_folder" "$usb_folder"
-
+${pkgs.libnotify}/bin/notify-send "Sync Complete!"
 ''}/bin/sync_music_player'';
     };
     
