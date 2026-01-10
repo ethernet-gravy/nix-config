@@ -15,7 +15,8 @@
 #    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
 #    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    #nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
+    lem.url = "github:lem-project/lem";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
     rust-overlay = {
         url = "github:oxalica/rust-overlay";
         inputs.nixpkgs.follows = "nixpkgs";
@@ -52,6 +53,7 @@
     nixpkgs,
     #home-manager,
     #stylix,
+    nixpkgs-stable,
     rust-overlay,
     nix-matlab,
     ...
@@ -60,16 +62,18 @@
     flake_overlays = [
         nix-matlab.overlay
     ];
-    #system = "x86_64-linux";
+    
+    stdenv.hostPlatform.system = "x86_64-linux";
   in {
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
+ 
     nixosConfigurations = {
+
       # FIXME replace with your hostname
       laptop = nixpkgs.lib.nixosSystem {
-        specialArgs = {
+       specialArgs = {
             inherit inputs outputs;
-            #inherit pkgs-stable;
 
         };
         # > Our main nixos configuration file <
@@ -111,9 +115,14 @@
           ];
       };
       pc = nixpkgs.lib.nixosSystem {
-        specialArgs = {
+        specialArgs = let system = "x86_64-linux"; 
+        in {
             inherit inputs outputs;
             #inherit pkgs-stable;
+            pkgs-stable = import nixpkgs-stable {
+                inherit system;
+                config.allowUnfree = true;
+            };
         };
         # > Our main nixos configuration file <
         # modules = [./nixos/configuration.nix];

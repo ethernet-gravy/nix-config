@@ -16,6 +16,24 @@
         "type": "github"
       }
     },
+    "flake-parts": {
+      "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib"
+      },
+      "locked": {
+        "lastModified": 1763759067,
+        "narHash": "sha256-LlLt2Jo/gMNYAwOgdRQBrsRoOz7BPRkzvNaI/fzXi2Q=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "2cccadc7357c0ba201788ae99c4dfa90728ef5e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": "systems_3"
@@ -77,6 +95,25 @@
         "type": "github"
       }
     },
+    "lem": {
+      "inputs": {
+        "flake-parts": "flake-parts",
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1767955333,
+        "narHash": "sha256-3+5RQh4bhiD8O+T2kDGnMfLQ2SDA5UaoMc2N/T84BOs=",
+        "owner": "lem-project",
+        "repo": "lem",
+        "rev": "0d2fa63ed52cdaf72a1c3a2ef33a7ae7209d063b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lem-project",
+        "repo": "lem",
+        "type": "github"
+      }
+    },
     "nix-matlab": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -100,11 +137,58 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1766309749,
-        "narHash": "sha256-3xY8CZ4rSnQ0NqGhMKAy5vgC+2IVK0NoVEzDoOh4DA4=",
+        "lastModified": 1765292561,
+        "narHash": "sha256-5XjyW4HhS+zCWCKuFfKfABClhKtHJKvmUMBzWj93ckM=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "a6531044f6d0bef691ea18d4d4ce44d0daa6e816",
+        "rev": "9adea044bcedaf08cf2c8d7ee575ffbfb839618e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "release-25.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-lib": {
+      "locked": {
+        "lastModified": 1761765539,
+        "narHash": "sha256-b0yj6kfvO8ApcSE+QmA6mUfu8IYG6/uU28OFn4PaC8M=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "719359f4562934ae99f5443f20aa06c2ffff91fc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
+    "nixpkgs-stable": {
+      "locked": {
+        "lastModified": 1767799921,
+        "narHash": "sha256-r4GVX+FToWVE2My8VVZH4V0pTIpnu2ZE8/Z4uxGEMBE=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "d351d0653aeb7877273920cd3e823994e7579b0b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-25.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1767892417,
+        "narHash": "sha256-dhhvQY67aboBk8b0/u0XB6vwHdgbROZT3fJAjyNh5Ww=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "3497aa5c9457a9d88d71fa93a4a8368816fbeeba",
         "type": "github"
       },
       "original": {
@@ -114,7 +198,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
+    "nixpkgs_3": {
       "locked": {
         "lastModified": 1751274312,
         "narHash": "sha256-/bVBlRpECLVzjV19t5KMdMFWSwKLtb5RyXdjz3LJT+g=",
@@ -137,11 +221,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1766422752,
-        "narHash": "sha256-WcxZB1rxbsMoIcHM1MsWQ5EjDrd4KQTMitUyM2lTmcw=",
+        "lastModified": 1768058714,
+        "narHash": "sha256-nyRGU5f04tal39wtjYxhNFfEOgOrlZiNp7oZRsdjqpw=",
         "owner": "noctalia-dev",
         "repo": "noctalia-shell",
-        "rev": "de00039a29d9d098eb028bbc481aff95cd59c8a4",
+        "rev": "740b2741e1a3913fa06aa46553818e9d3d7fbba8",
         "type": "github"
       },
       "original": {
@@ -152,14 +236,14 @@
     },
     "openconnect-pulse-launcher": {
       "inputs": {
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1766114450,
-        "narHash": "sha256-kzdkucTXXTaFg5mzU/SpVeRTP3u+APhWRmsant+a2oU=",
+        "lastModified": 1767816492,
+        "narHash": "sha256-1WH/5+yYG0Uh2W/KcY5pOQJtaN9CWfQ9J36tuNwiH3s=",
         "owner": "erahhal",
         "repo": "openconnect-pulse-launcher",
-        "rev": "eb703630817447f9fc383109022dd68c81791814",
+        "rev": "0daeea15958deff321b5b8bab98f64e45a24045d",
         "type": "github"
       },
       "original": {
@@ -175,11 +259,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1766386896,
-        "narHash": "sha256-1uql4y229Rh+/2da99OVNe6DfsjObukXkf60TYRCvhI=",
+        "lastModified": 1768040574,
+        "narHash": "sha256-E+TfTOZHstwT7Q+C7fcvuVDGyF9LXAMRAtw9y3N8Ckw=",
         "owner": "outfoxxed",
         "repo": "quickshell",
-        "rev": "3918290c1bcd93ed81291844d9f1ed146672dbfc",
+        "rev": "08c7fc2472dab5277f1a0e6ebb87c83fef2978c7",
         "type": "github"
       },
       "original": {
@@ -191,8 +275,10 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "lem": "lem",
         "nix-matlab": "nix-matlab",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
+        "nixpkgs-stable": "nixpkgs-stable",
         "noctalia": "noctalia",
         "openconnect-pulse-launcher": "openconnect-pulse-launcher",
         "quickshell": "quickshell",
@@ -230,11 +316,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1766371695,
-        "narHash": "sha256-W7CX9vy7H2Jj3E8NI4djHyF8iHSxKpb2c/7uNQ/vGFU=",
+        "lastModified": 1768012928,
+        "narHash": "sha256-HFFVQaux1JoOjEvgBT0ASk1Je+jsipyO5c91FoLMed8=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "d81285ba8199b00dc31847258cae3c655b605e8c",
+        "rev": "312b4371e72f644ffcff25b23615195e3b390643",
         "type": "github"
       },
       "original": {
@@ -251,11 +337,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1766218121,
-        "narHash": "sha256-+l3HpMlW8aUfXLMN09BplyAlw/Cs+1pQb18BPNeWiU4=",
+        "lastModified": 1767676527,
+        "narHash": "sha256-Hcz6iMVcSoYlhJZNcEkcO9Viu9H/mdFfWxEYtFUjhNo=",
         "owner": "saltnpepper97",
         "repo": "stasis",
-        "rev": "86df99423b76251c551e29842c28acf421e62646",
+        "rev": "8f519faaa032a0170cd5ae516388d895b4d4dd83",
         "type": "github"
       },
       "original": {

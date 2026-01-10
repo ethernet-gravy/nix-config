@@ -34,7 +34,6 @@
         wgnord
         nicotine-plus
         btop
-        qmk
         piper
         libratbag
         ipe
@@ -58,16 +57,14 @@
           mylatexformat cancel preview;
        })
         ffmpeg
-        (wrapOBS {
-            plugins = with obs-studio-plugins; [
-#droidcam currently broken
-                #droidcam-obs
-                obs-vaapi
-            ];
-         })
-    ]); 
+        ]); 
 
     programs.yazi.enable = true;
+
+    programs.obs-studio = {
+        enable = true;
+        plugins = with pkgs; [ obs-studio-plugins.obs-vaapi];
+    };
 
     nixpkgs.config.packageOverrides = pkgs: {
         yazi = pkgs.yazi.override  {
@@ -76,5 +73,6 @@
     };
 
     programs.coolercontrol.enable = true;
+    hardware.keyboard.qmk.enable = true;
 }
 

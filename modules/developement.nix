@@ -1,5 +1,8 @@
-{pkgs, ... }:
+{pkgs, inputs, ... }:
 {
+    nixpkgs.overlays = [
+        inputs.lem.overlays.default
+    ];
     environment.systemPackages = with pkgs; [
         lua51Packages.jsregexp
         tree-sitter
@@ -12,6 +15,7 @@
         neovide
         obsidian
         emacs-pgtk
+        lem-sdl2
         libvterm
         libtool #stuff for emac
         man-pages

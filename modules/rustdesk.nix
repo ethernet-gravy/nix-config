@@ -1,7 +1,7 @@
 
-{pkgs, ...}:
+{pkgs, pkgs-stable, config,  ...}:
 {
-    environment.systemPackages = with pkgs; [
+    environment.systemPackages = with pkgs-stable; [
         rustdesk
     ];
 }
