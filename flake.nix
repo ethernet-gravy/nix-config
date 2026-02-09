@@ -74,7 +74,10 @@
       laptop = nixpkgs.lib.nixosSystem {
        specialArgs = {
             inherit inputs outputs;
-
+            pkgs-stable = import nixpkgs-stable {
+                inherit system;
+                config.allowUnfree = true;
+            };
         };
         # > Our main nixos configuration file <
         # modules = [./nixos/configuration.nix];
