@@ -1,4 +1,4 @@
-{pkgs, inputs, config, ...}:
+{pkgs, pkgs-stable, inputs, config, ...}:
 #let 
 #  stable = import inputs.nixpkgs-stable { config = config.nixpkgs.config // { allowUnfree = true; }; };
 #in 
@@ -35,11 +35,12 @@
         nicotine-plus
         btop
         piper
+        yt-dlp
         libratbag
         ipe
         openconnect
         inputs.openconnect-pulse-launcher.packages."${pkgs.system}".openconnect-pulse-launcher
-        freecad
+        pkgs-stable.freecad
         chezmoi
         styluslabs-write
         #xournalpp # write but better, gonna keep both, see which one i like more.
@@ -56,6 +57,8 @@
           etoolbox xcolor enumitem collection-fontsrecommended
           mylatexformat cancel preview;
        })
+        typst
+        tinymist
         ffmpeg
         ]); 
 
