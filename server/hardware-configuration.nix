@@ -37,9 +37,6 @@
   # networking.interfaces.wlp2s0.useDHCP = lib.mkDefault true;
   hardware.graphics = {
     enable = true;
-    extraPackages = with pkgs; [
-        intel-media-sdk
-    ];
   };
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
