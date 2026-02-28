@@ -72,7 +72,8 @@
 
       # FIXME replace with your hostname
       laptop = nixpkgs.lib.nixosSystem {
-       specialArgs = {
+       specialArgs = let system = "x86_64-linux"; 
+       in {
             inherit inputs outputs;
             pkgs-stable = import nixpkgs-stable {
                 inherit system;
@@ -107,7 +108,8 @@
          ];
       };
       server = nixpkgs.lib.nixosSystem {
-          specialArgs = {
+          specialArgs = let system = "x86_64-linux"; 
+          in {
               inherit inputs outputs;
           };
           modules = [
@@ -115,6 +117,8 @@
 #          ./modules/fish.nix
           ./modules/developement.nix
           ./modules/sync.nix
+          ./modules/porkbun.nix
+          ./modules/caddy.nix
           ];
       };
       pc = nixpkgs.lib.nixosSystem {

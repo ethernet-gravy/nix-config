@@ -1,0 +1,20 @@
+
+miseryindex.xyz {
+    root * /var/www/main
+        file_server
+}
+
+*.miseryindex.xyz {
+    tls {
+        dns porkbun {
+            api_key {env.PORKBUN_KEY}
+            api_secret_key {env.PORKBUN_SECRET}
+        }
+    }
+
+    @semyy host semyy.miseryindex.xyz
+        handle @semyy {
+            root * /var/www/semyy
+        }
+
+}
