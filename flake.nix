@@ -103,6 +103,7 @@
             ./modules/niri.nix
             ./modules/wayland-utils.nix
             ./modules/teams.nix
+            ./modules/productivity.nix
             ./modules/music-player-sync.nix
             (import ./modules/matlab.nix flake_overlays)
          ];
@@ -158,6 +159,7 @@
             ./modules/niri.nix
             ./modules/wayland-utils.nix
             ./modules/teams.nix
+            ./modules/productivity.nix
             ./modules/music-player-sync.nix
             (import ./modules/matlab.nix flake_overlays)
             #./modules/kvm.nix

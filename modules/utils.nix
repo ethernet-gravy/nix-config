@@ -5,10 +5,9 @@
 {
      boot.plymouth.enable = true;
     environment.localBinInPath = true;
-    environment.systemPackages = (with pkgs; [
+    environment.systemPackages = with pkgs; [
         wget
         git
-        libreoffice
         mesa-demos
         vulkan-tools
         gnumake
@@ -29,7 +28,6 @@
         keepassxc
         vesktop
         telegram-desktop
-        zathura
         jq
         wgnord
         nicotine-plus
@@ -37,30 +35,14 @@
         piper
         yt-dlp
         libratbag
-        ipe
         openconnect
         inputs.openconnect-pulse-launcher.packages."${pkgs.system}".openconnect-pulse-launcher
-        pkgs-stable.freecad
         chezmoi
-        styluslabs-write
-        #xournalpp # write but better, gonna keep both, see which one i like more.
-        rnote # okay so both suck. this one's better
-        texlab
         ouch #obvious unified compression helper
         orca-slicer
         simple-mtpfs
-        (pkgs.texlive.combine {
-        inherit (pkgs.texlive) scheme-medium
-          dvisvgm dvipng # for preview and export as html
-          wrapfig amsmath ulem hyperref capt-of
-          latexmk titlesec listings caption float subfig
-          etoolbox xcolor enumitem collection-fontsrecommended
-          mylatexformat cancel preview;
-       })
-        typst
-        tinymist
         ffmpeg
-        ]); 
+        ]; 
 
     programs.yazi.enable = true;
 

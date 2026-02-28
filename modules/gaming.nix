@@ -13,7 +13,7 @@
         pcsx2
         rpcs3
         ns-usbloader
-        xorg.xhost
+        xhost
     ]);
 
   services.sunshine = {
@@ -29,10 +29,10 @@
     nixpkgs.config.packageOverrides = pkgs: {
         steam = pkgs.steam.override {
             extraPkgs = pkgs: with pkgs; [
-                xorg.libXcursor
-                    xorg.libXi
-                    xorg.libXinerama
-                    xorg.libXScrnSaver
+                libXcursor
+                    libXi
+                    libXinerama
+                    libXScrnSaver
                     libpng
                     libpulseaudio
                     libvorbis
