@@ -105,6 +105,7 @@
             ./modules/teams.nix
             ./modules/productivity.nix
             ./modules/music-player-sync.nix
+            ./modules/system-maintenance.nix
             (import ./modules/matlab.nix flake_overlays)
          ];
       };
@@ -161,6 +162,7 @@
             ./modules/teams.nix
             ./modules/productivity.nix
             ./modules/music-player-sync.nix
+            ./modules/system-maintenance.nix
             (import ./modules/matlab.nix flake_overlays)
             #./modules/kvm.nix
          ];
