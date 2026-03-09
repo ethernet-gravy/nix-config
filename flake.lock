@@ -34,6 +34,24 @@
         "type": "github"
       }
     },
+    "flake-parts_2": {
+      "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib_2"
+      },
+      "locked": {
+        "lastModified": 1772408722,
+        "narHash": "sha256-rHuJtdcOjK7rAHpHphUb1iCvgkU3GpfvicLMwwnfMT0=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "f20dc5d9b8027381c474144ecabc9034d6a839a3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -140,6 +158,21 @@
         "owner": "nix-community",
         "repo": "nixpkgs.lib",
         "rev": "719359f4562934ae99f5443f20aa06c2ffff91fc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
+    "nixpkgs-lib_2": {
+      "locked": {
+        "lastModified": 1772328832,
+        "narHash": "sha256-e+/T/pmEkLP6BHhYjx6GmwP5ivonQQn0bJdH9YrRB+Q=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "c185c7a5e5dd8f9add5b2f8ebeff00888b070742",
         "type": "github"
       },
       "original": {
@@ -265,7 +298,8 @@
         "openconnect-pulse-launcher": "openconnect-pulse-launcher",
         "quickshell": "quickshell",
         "rose-pine-hyprcursor": "rose-pine-hyprcursor",
-        "rust-overlay": "rust-overlay"
+        "rust-overlay": "rust-overlay",
+        "stasis": "stasis"
       }
     },
     "rose-pine-hyprcursor": {
@@ -307,6 +341,27 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "stasis": {
+      "inputs": {
+        "flake-parts": "flake-parts_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1772730060,
+        "narHash": "sha256-b9IqJjMUfmPqxsnooSD1A797UCx/trrpiDy+xEowjb4=",
+        "owner": "saltnpepper97",
+        "repo": "stasis",
+        "rev": "065cf3d9ed34f06bef17b93c31ced0a78109f5da",
+        "type": "github"
+      },
+      "original": {
+        "owner": "saltnpepper97",
+        "repo": "stasis",
         "type": "github"
       }
     },

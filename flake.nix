@@ -26,7 +26,10 @@
         url = "github:ndom91/rose-pine-hyprcursor";
         inputs.nixpkgs.follows = "nixpkgs";
     };
-
+    stasis = {
+      url ="github:saltnpepper97/stasis";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     quickshell = {
       url = "github:outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";

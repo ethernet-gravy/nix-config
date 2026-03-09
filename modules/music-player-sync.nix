@@ -28,6 +28,7 @@ music_folder="/home/nakul/Music/"
 ${pkgs.libnotify}/bin/notify-send "Syncing music library to EROS Q"
 ${pkgs.rsync}/bin/rsync -av --no-owner --no-group --ignore-existing --size-only --delete-after --exclude ".stfolder/" --exclude ".rockbox/" --exclude "*.bmark" "$music_folder" "$usb_folder"
 ${pkgs.libnotify}/bin/notify-send "Sync Complete!"
+${pkgs.udiskie}/bin/udiskie-umount /run/media/nakul/EROS\ Q/
 ''}/bin/sync_music_player'';
     };
     

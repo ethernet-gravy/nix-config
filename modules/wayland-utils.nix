@@ -10,7 +10,7 @@
   services.elephant.enable = true;
   environment.systemPackages = with pkgs; [
     mako
-    stasis
+    inputs.stasis.packages.${pkgs.system}.stasis
     inputs.noctalia.packages.${pkgs.system}.default
     rofi
     walker
