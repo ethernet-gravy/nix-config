@@ -1,5 +1,13 @@
 {pkgs, pkgs-stable, ...}:
 {
+    nixpkgs.overlays = [
+        (final: prev: {
+            ipe = prev.ipe.override {
+                withTeXLive = false;
+            };
+         })
+
+    ];
   environment.systemPackages = with pkgs; [
     tomat #pomodoro timer
     libreoffice
