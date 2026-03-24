@@ -16,7 +16,7 @@
         wrapfig amsmath ulem hyperref capt-of
         latexmk titlesec listings caption fourier float subfig
         etoolbox xcolor enumitem collection-fontsrecommended
-        mylatexformat cancel preview collection-fontsextra;
+        mylatexformat cancel preview libertinus collection-fontsextra;
     })
     typst
     tinymist
