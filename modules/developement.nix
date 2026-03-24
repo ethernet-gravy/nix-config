@@ -15,7 +15,7 @@
         neovide
         obsidian
         emacs-pgtk
-        lem-sdl2
+        lem-webview
         libvterm
         libtool #stuff for emac
         man-pages
