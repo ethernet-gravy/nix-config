@@ -15,8 +15,11 @@
 #    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
 #    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    lem.url = "github:lem-project/lem";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
+    lem = {
+        url = "github:lem-project/lem";
+        inputs.nixpkgs.follows = "nixpkgs-stable";
+    };
     rust-overlay = {
         url = "github:oxalica/rust-overlay";
         inputs.nixpkgs.follows = "nixpkgs";
