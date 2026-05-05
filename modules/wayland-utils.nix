@@ -24,6 +24,6 @@
     brightnessctl
     libnotify
     lisgd # for arbitrary touchscreen gestures.
-    hyprlock
+    minlock
   ];
 }
